@@ -21,7 +21,7 @@ A modern web application for exploring and discovering the most popular Java rep
 - **Framer Motion**: Animation library for smooth transitions
 - **Zustand**: Minimalist yet powerful state manager
 - **Axios**: HTTP client for API requests
-- **Radix UI**: Accessible and customizable components
+- **Shadcn UI**: Accessible and customizable components
 - **Lucide React**: Modern and elegant icons
 
 ## 🚦 Getting Started
@@ -70,15 +70,14 @@ npm run preview: Preview the production build locally
 
 🏗️ Project Structure
 
-java-toprepos-front/
-├── src/
-│   ├── components/     # Reusable components
-│   ├── stores/        # Global states (Zustand)
-│   ├── axios/         # Axios configuration
-│   ├── lib/           # Utilities and helpers
-│   └── assets/        # Static assets
-├── public/            # Public files
-└── ...
+java-toprepos-front/             # Dossier racine du projet
+├── src/                         # Code source
+│   ├── components/             # Composants réutilisables React
+│   ├── stores/                 # États globaux avec Zustand
+│   ├── axios/                  # Configuration d'Axios
+│   ├── lib/                    # Utilitaires et helpers
+│   └── assets/                # Ressources statiques
+└── public/                     # Fichiers publics
 
 
 🤝 Contributing
