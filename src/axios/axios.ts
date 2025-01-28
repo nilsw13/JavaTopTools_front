@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-const apiUrl = "https://javatoptoolsapi-production.up.railway.app/";
+const apiUrl = "https://javatoptoolsapi-production.up.railway.app/api";
 console.log('API URL utilisée :', apiUrl); 
 
 const api = axios.create({
