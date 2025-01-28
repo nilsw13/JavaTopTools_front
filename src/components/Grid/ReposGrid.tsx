@@ -55,8 +55,9 @@ const {getRepos, repos, page, error , loading, setPage, currentPage} = useReposS
 
     return (
         <>
+        <AnimatePresence>
             <div className="container mx-auto ">
-                <AnimatePresence>
+                
                     {error && (
                         <motion.div
                             initial={{ opacity: 0 }}
@@ -68,9 +69,9 @@ const {getRepos, repos, page, error , loading, setPage, currentPage} = useReposS
                             {error}
                         </motion.div>
                     )}
-                </AnimatePresence>
+                
     
-                <AnimatePresence mode="wait">
+               
                     {loading ? (
                         <motion.div
                             key="loader"
@@ -94,11 +95,18 @@ const {getRepos, repos, page, error , loading, setPage, currentPage} = useReposS
                             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                                 {repos.slice(0,6).map((repo) => (
                                     <motion.div
+                                    
                                         key={repo.id}
-                                        initial={{ opacity: 0 }}
-                                        animate={{ opacity: 1 }}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ 
+                                            opacity: 1, y: 0 }}
                                         exit={{ opacity: 0 }}
-                                        transition={{ duration: 0.5 }}
+                                        transition={{ 
+                                            delay: 0.2,
+                                            duration: 0.5,
+                                            type: 'tween',
+                                            stiffness: 100
+                                         }}
                                     >
                                         <RepoCard repo={repo} />
                                     </motion.div>
@@ -106,7 +114,7 @@ const {getRepos, repos, page, error , loading, setPage, currentPage} = useReposS
                             </div>
                         </motion.div>
                     )}
-                </AnimatePresence>
+                
     
                 <div className="gap-4 my-20 w-fit mx-auto rounded-lg">
                     <Button 
@@ -128,6 +136,7 @@ const {getRepos, repos, page, error , loading, setPage, currentPage} = useReposS
                     </Button>
                 </div>
             </div>
+            </AnimatePresence>
         </>
     );
 }
