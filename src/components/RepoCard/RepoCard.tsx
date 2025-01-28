@@ -23,7 +23,7 @@ interface GithubRepo {
 function RepoCard({repo}: {repo: GithubRepo}) {
   return (
     <div>
-        <Card className='flex flex-col  hover:shadow-xl shadow-lg hover:scale-105 transition-all md:h-[340px] md:w-[340px]' key={repo.id}>
+        <Card className='flex flex-col  hover:shadow-xl shadow-lg md:hover:scale-105 transition-all md:h-[340px] md:w-[340px] w-[320px] h-[300px]' key={repo.id}>
             <CardTitle className='flex align-middle text-center mt-2 ml-4 mb-2 '>
                 <img src={repo.owner.avatar_url} alt="" className='w-20 h-20 m-3 rounded-full' />
                 <h3 className='pt-10'>{repo.name}</h3>
