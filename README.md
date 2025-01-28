@@ -70,14 +70,17 @@ npm run preview: Preview the production build locally
 
 🏗️ Project Structure
 
-java-toprepos-front/             # Dossier racine du projet
-├── src/                         # Code source
-│   ├── components/             # Composants réutilisables React
-│   ├── stores/                 # États globaux avec Zustand
-│   ├── axios/                  # Configuration d'Axios
-│   ├── lib/                    # Utilitaires et helpers
-│   └── assets/                # Ressources statiques
-└── public/                     # Fichiers publics
+
+```text
+java-toprepos-front/
+├── src/
+│   ├── components/    # Reusable components
+│   ├── stores/        # Global states (Zustand)
+│   ├── axios/         # Axios configuration
+│   ├── lib/           # Utilities and helpers
+│   └── assets/        # Static assets
+└── public/            # Public files
+```
 
 
 🤝 Contributing
