@@ -2,8 +2,8 @@
 
 import axios from 'axios';
 
-const apiUrl = import.meta.env.VITE_API_URL;
-console.log('API URL utilisée:', apiUrl); 
+const apiUrl = "https://javatoptoolsapi-production.up.railway.app/";
+console.log('API URL utilisée :', apiUrl); 
 
 const api = axios.create({
     baseURL: apiUrl || 'http://localhost:8080/api',  // URL de l'API
