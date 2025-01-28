@@ -18,7 +18,7 @@ function App() {
   return (
     
     <div
-    className=" ">
+    className="overflow-x-hidden">
 
       <section className=' bg-stone-200'>
         <HomeHeader/>

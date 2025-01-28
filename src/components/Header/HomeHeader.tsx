@@ -25,7 +25,7 @@ function HomeHeader() {
                     </a>
                     
                     <a href="">
-                      <img src={logo} alt="logo" className="md:w-10 md:h-10 text-primary" />
+                      <img src={logo} alt="logo" className="w-6 h-6 md:w-10 md:h-10 text-primary" />
                     </a>
                 </div>
                 </div>
