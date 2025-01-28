@@ -1,50 +1,86 @@
-# React + TypeScript + Vite
+# Java Top Repositories Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application for exploring and discovering the most popular Java repositories on GitHub. This application provides an interactive and elegant interface to visualize the most starred Java projects in the open source community.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Dynamic display of most popular Java repositories
+- Smooth animations with Framer Motion
+- Responsive and modern UI with Tailwind CSS
+- Global state management with Zustand
+- GitHub API integration via Axios
+- Robust design system with reusable components
+- Full TypeScript support for better maintainability
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React 18**: Modern JavaScript framework for building user interfaces
+- **TypeScript**: Static typing for more robust development
+- **Vite**: Ultra-fast build tool for optimal development experience
+- **Tailwind CSS**: Utility-first CSS framework for flexible and maintainable styling
+- **Framer Motion**: Animation library for smooth transitions
+- **Zustand**: Minimalist yet powerful state manager
+- **Axios**: HTTP client for API requests
+- **Radix UI**: Accessible and customizable components
+- **Lucide React**: Modern and elegant icons
 
-- Configure the top-level `parserOptions` property like this:
+## 🚦 Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Prerequisites
+
+- Node.js (version 18 or higher)
+- npm or yarn or pnpm
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/java-toprepos-front.git
+cd java-toprepos-front
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install dependencies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
 ```
+
+
+3. Create a .env file in the root directory
+
+```bash
+  VITE_API_URL = your_api_url
+```
+
+4. Start the development server
+
+```bash
+  npm run dev
+```
+
+📦 Available Scripts
+
+npm run dev: Launches the development server
+npm run build: Builds the project for production
+npm run lint: Checks code with ESLint
+npm run preview: Preview the production build locally
+
+
+
+🏗️ Project Structure
+
+java-toprepos-front/
+├── src/
+│   ├── components/     # Reusable components
+│   ├── stores/        # Global states (Zustand)
+│   ├── axios/         # Axios configuration
+│   ├── lib/           # Utilities and helpers
+│   └── assets/        # Static assets
+├── public/            # Public files
+└── ...
+
+
+🤝 Contributing
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
