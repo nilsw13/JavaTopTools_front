@@ -24,17 +24,7 @@ function PreLoader({loadingMaxNumber, duration}: PreLoaderProps) {
         const [charToDisplay, setCharToDisplay] = useState(0);
 
 
-        for (let i = 0; i < loadingNumbers.length; i++) {
-
-            loadingNumbers[i] = i;
-         
-            
-            setTimeout(() => {
-                setCharToDisplay(loadingNumbers[i])
-                console.log(loadingNumbers[i])
-            }, i * charDuration);
-        }
-
+        
 
         return (
             <AnimatePresence>
