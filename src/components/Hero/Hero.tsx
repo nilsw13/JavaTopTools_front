@@ -1,6 +1,6 @@
 
 
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence, delay, motion } from 'framer-motion'
 import RepoCard from '../RepoCard/RepoCard'
 import { useEffect, useState } from 'react'
 
@@ -72,6 +72,7 @@ function Hero() {
       opacity: 1,
       y: 0,
       transition: {
+        delay: 0.6,
         duration: 0.5,
         type: "spring",
         stiffness: 100
@@ -98,21 +99,15 @@ function Hero() {
           {/* Première colonne : titre */}
           <motion.div
             variants={childVariants}
-            className="flex flex-col justify-center items-start gap-4 sm:gap-6 md:gap-8 
-              scale-100 md:scale-110 
-              text-center md:text-left 
-              px-4 sm:px-0" // Petit padding sur mobile pour éviter le collage aux bords
+            className="flex flex-col items-start justify-center gap-4 px-4 text-center scale-100 sm:gap-6 md:gap-8 md:scale-110 md:text-left sm:px-0" // Petit padding sur mobile pour éviter le collage aux bords
           >
             <h1 className="text-2xl sm:text-3xl md:text-6xl lg:text-8xl font-bold leading-tight tracking-tighter lg:leading-[1.105]
               w-full md:w-auto 
             ">
-              <span className="text-red-600 block md:inline">Discover most</span>
+              <span className="block text-red-600 md:inline">Discover most</span>
               <br className="hidden md:block" />
               popular{' '}
-              <span className="bg-red-300/60 px-2 sm:px-4 md:px-6 ml-0 md:ml-2 
-                inline-block 
-                my-2 md:my-0 
-              ">
+              <span className="inline-block px-2 my-2 ml-0 bg-red-300/60 sm:px-4 md:px-6 md:ml-2 md:my-0 ">
                 Java
               </span>
               <br className="hidden md:block" />
@@ -131,12 +126,7 @@ function Hero() {
           {displayedRepo && (
             <motion.div
               variants={childVariants}
-              className="flex justify-center md:justify-end 
-                w-full 
-                mt-8 md:mt-0 
-                scale-95 sm:scale-90 
-                px-4 sm:px-0 
-              "
+              className="flex justify-center w-full px-4 mt-8 scale-95 md:justify-end md:mt-0 sm:scale-90 sm:px-0 "
             >
               <RepoCard repo={displayedRepo} />
             </motion.div>
