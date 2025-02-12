@@ -14,14 +14,11 @@ interface PreLoaderProps {
 
 
 
-function PreLoader({loadingMaxNumber, duration}: PreLoaderProps) {
+function PreLoader() {
 
 
     
 
-        const  loadingNumbers = new Array<number>(loadingMaxNumber + 1);
-        const charDuration = duration / loadingMaxNumber;
-        const [charToDisplay, setCharToDisplay] = useState(0);
 
 
         

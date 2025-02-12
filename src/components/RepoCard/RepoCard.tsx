@@ -24,12 +24,12 @@ function RepoCard({repo}: {repo: GithubRepo}) {
   return (
     <div>
         <Card className='flex flex-col  hover:shadow-xl shadow-lg md:hover:scale-105 transition-all md:h-[340px] md:w-[340px] w-[320px] h-[300px]' key={repo.id}>
-            <CardTitle className='flex align-middle text-center mt-2 ml-4 mb-2 '>
+            <CardTitle className='flex mt-2 mb-2 ml-4 text-center align-middle '>
                 <img src={repo.owner.avatar_url} alt="" className='w-20 h-20 m-3 rounded-full' />
                 <h3 className='pt-10'>{repo.name}</h3>
                   
             </CardTitle>
-            <CardContent className='text-center mt-8 space-y-2 flex flex-col flex-grow'>
+            <CardContent className='flex flex-col flex-grow mt-8 space-y-2 text-center'>
             
             <div className="flex flex-col flex-grow space-y-2">
             <div className="flex justify-center">
@@ -39,9 +39,12 @@ function RepoCard({repo}: {repo: GithubRepo}) {
             <p className='truncate'>{repo.description}</p>
           </div>
             
-            <Button className='mt-auto p-4'>
-            <a href={repo.html_url}>See the code</a>
-            </Button>
+            <a href={repo.html_url}>            <Button className='p-4 mt-auto'>
+              See on Github
+              </Button>
+
+
+            </a>
             </CardContent>
           </Card>
     </div>

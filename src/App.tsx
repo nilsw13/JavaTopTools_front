@@ -21,7 +21,7 @@ function App() {
       setLoading(true)
       setTimeout(() => {
         setLoading(false)
-    }, 5000)
+    }, 3000)
     }
 
     useEffect(() => {
@@ -44,7 +44,7 @@ function App() {
 
     {/* <PreLoader/> */}
     {loading ? (
-          <PreLoader loadingMaxNumber={100} duration={5000} />
+          <PreLoader />
 
         ) :
     

@@ -48,48 +48,16 @@ function Hero() {
 
    
 
-  const containerVariants = {
-    hidden: {
-      opacity: 0
-    },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        // les animations des enfants se déclenchent en meme temps celle du parent
-        when: "beforeChildren",
-        staggerChildren: 0
-      }
-    }
-  }
+ 
   
-  const childVariants = {
-    hidden: {
-      opacity: 0,
-      y: 20
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.6,
-        duration: 0.5,
-        type: "spring",
-        stiffness: 100
-      }
-    }
-  }
  
 
 
   return (
-    <AnimatePresence>
       <div className="min-h-screen">
         <motion.section
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
+        
+        
           // Ajustement du padding responsive
           className="container mx-auto grid min-h-[calc(100vh-4rem)] items-center gap-6 
             p-4 sm:p-8 md:p-16 lg:p-32 
@@ -98,7 +66,7 @@ function Hero() {
         >
           {/* Première colonne : titre */}
           <motion.div
-            variants={childVariants}
+           
             className="flex flex-col items-start justify-center gap-4 px-4 text-center scale-100 sm:gap-6 md:gap-8 md:scale-110 md:text-left sm:px-0" // Petit padding sur mobile pour éviter le collage aux bords
           >
             <h1 className="text-2xl sm:text-3xl md:text-6xl lg:text-8xl font-bold leading-tight tracking-tighter lg:leading-[1.105]
@@ -125,7 +93,7 @@ function Hero() {
           {/* Deuxième colonne : card repo */}
           {displayedRepo && (
             <motion.div
-              variants={childVariants}
+            
               className="flex justify-center w-full px-4 mt-8 scale-95 md:justify-end md:mt-0 sm:scale-90 sm:px-0 "
             >
               <RepoCard repo={displayedRepo} />
@@ -133,7 +101,7 @@ function Hero() {
           )}
         </motion.section>
       </div>
-    </AnimatePresence>
+    
   );
   }
 
