@@ -84,13 +84,13 @@ java-toprepos-front/
 
 
 
-## 🤝 Contribuer
+## 🤝 Contribute
 
-  -**Fork project** 
-  -**Create new branch (git checkout -b my-feature)**
-  -**Commit (git commit -m 'add feature')**
-  -**Push (git push origin my-feature)**
-  -**Open a pull request ✨**
+-**Fork project** 
+-**Create new branch (git checkout -b my-feature)**
+-**Commit (git commit -m 'add feature')**
+-**Push (git push origin my-feature)**
+-**Open a pull request ✨**
 
 
 
