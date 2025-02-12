@@ -82,7 +82,7 @@ java-toprepos-front/
 └── public/            # Public files
 ```
 
-## 🤝 Contribute
+## 🤝 To Contribute
 
 1. Fork project
 2. Create new branch (git checkout -b my-feature)
