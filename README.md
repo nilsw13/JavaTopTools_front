@@ -59,7 +59,7 @@ npm install
   npm run dev
 ```
 
-📦 Available Scripts
+## 📦 Available Scripts
 
 npm run dev: Launches the development server
 npm run build: Builds the project for production
@@ -68,7 +68,7 @@ npm run preview: Preview the production build locally
 
 
 
-🏗️ Project Structure
+## 🏗️ Project Structure
 
 
 ```text
@@ -83,6 +83,14 @@ java-toprepos-front/
 ```
 
 
-🤝 Contributing
-Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+## 🤝 Contribuer
+
+  -**Fork project** 
+  -**Create new branch (git checkout -b my-feature)**
+  -**Commit (git commit -m 'add feature')**
+  -**Push (git push origin my-feature)**
+  -**Open a pull request ✨**
+
+
 
