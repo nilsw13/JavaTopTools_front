@@ -82,15 +82,13 @@ java-toprepos-front/
 └── public/            # Public files
 ```
 
-
-
 ## 🤝 Contribute
 
--Fork project
--Create new branch (git checkout -b my-feature)
--Commit (git commit -m 'add feature')
--Push (git push origin my-feature)
--Open a pull request ✨
+1. Fork project
+2. Create new branch (git checkout -b my-feature)
+3. Commit (git commit -m 'add feature')
+4. Push (git push origin my-feature)
+5. Open a pull request ✨
 
 
 
