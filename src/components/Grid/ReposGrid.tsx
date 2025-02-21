@@ -1,4 +1,4 @@
-import  { useEffect } from 'react'
+
 
 import { Loader2} from 'lucide-react'
 
@@ -30,18 +30,13 @@ function ReposGrid() {
     
    
 
-const {getRepos, repos, page, error , loading, setPage, currentPage} = useReposStore()
+const { repos, error , loading, setPage, currentPage} = useReposStore()
 
-    useEffect(() => {
-        const data = getRepos(page)
-        console.log("data retourné par getrepos()", data)
-        
-    }, [page]) // appelé à chaque changement de page
+   
 
 
 
-
-
+    
 
 
 
@@ -64,7 +59,7 @@ const {getRepos, repos, page, error , loading, setPage, currentPage} = useReposS
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.5 }}
-                            className='bg-red-500 text-white p-4 rounded-lg text-center'
+                            className='p-4 text-center text-white bg-red-500 rounded-lg'
                         >
                             {error}
                         </motion.div>
@@ -81,7 +76,7 @@ const {getRepos, repos, page, error , loading, setPage, currentPage} = useReposS
                             transition={{ duration: 0.5 }}
                             className="flex justify-center items-center min-h-[600px]"
                         >
-                            <Loader2 className='animate-spin w-20 h-20'/>
+                            <Loader2 className='w-20 h-20 animate-spin'/>
                         </motion.div>
                     ) : (
                         <motion.div
@@ -92,7 +87,7 @@ const {getRepos, repos, page, error , loading, setPage, currentPage} = useReposS
                             transition={{ duration: 0.5 }}
                             className='flex flex-col items-center mt-10'
                         >
-                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                                 {repos.slice(0,6).map((repo) => (
                                     <motion.div
                                     
@@ -116,7 +111,7 @@ const {getRepos, repos, page, error , loading, setPage, currentPage} = useReposS
                     )}
                 
     
-                <div className="gap-4 my-20 w-fit mx-auto rounded-lg">
+                <div className="gap-4 mx-auto my-20 rounded-lg w-fit">
                     <Button 
                         onClick={() => setPage(currentPage- 1)}
                        
@@ -124,7 +119,7 @@ const {getRepos, repos, page, error , loading, setPage, currentPage} = useReposS
                         Précédent
                     </Button>
     
-                    <span className='inline-block font-bold px-3'>
+                    <span className='inline-block px-3 font-bold'>
                         Page {currentPage} 
                     </span>
     

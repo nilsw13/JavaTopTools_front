@@ -8,25 +8,33 @@ import Hero from './components/Hero/Hero'
  import {motion, AnimatePresence} from 'framer-motion'
 import PreLoader from './components/Preloader/PreLoader'
 import { useEffect, useState } from 'react'
+import useReposStore from './stores/ReposStore'
 
 function App() {
 
 
-    const [loading, setLoading] = useState(true)
+   
 
+    const { getRepos, page} = useReposStore();
   
   
-
-    const handlePreloder = () => {
-      setLoading(true)
-      setTimeout(() => {
-        setLoading(false)
-    }, 3000)
-    }
-
+    const [initialLoading, setInitialLoading] = useState(true);
+    
     useEffect(() => {
-      handlePreloder()
-    }, [])
+      const initializeData = async () => {
+        try {
+          await getRepos(page);
+          
+          setInitialLoading(false);
+        } finally {
+         setInitialLoading(false)
+        }
+      };
+  
+      setTimeout(() => {
+            initializeData();
+      }, 3000)
+    }, []);
 
 
 
@@ -43,7 +51,7 @@ function App() {
     <div>
 
     {/* <PreLoader/> */}
-    {loading ? (
+    {initialLoading ? (
           <PreLoader />
 
         ) :
